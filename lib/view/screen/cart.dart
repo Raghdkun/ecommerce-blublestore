@@ -115,7 +115,7 @@ class Cart extends StatelessWidget {
                               count: "${controller.data[index].countitems}",
                               onPressedAdd: () async {
                                 await controller.addItems(
-                                    controller.data[index].itemsId!.toString(), controller.data[index].cartOrderscolor!,controller.data[index].cartOrderssize!);
+                                    controller.data[index].itemsId!.toString(), controller.data[index].cartOrderscolor!, controller.data[index].cartOrderssize!);
                                 controller.refreshPage();
                               },
                               onPressedRemove: () async {

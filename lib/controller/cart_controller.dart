@@ -16,7 +16,7 @@ class CartController extends GetxController {
 
   MyServices myServices = Get.find();
   TextEditingController? controllerCoupon;
-  CartModel? cartModel ; 
+  CartModel? cartModel;
 
   List<CartModel> data = [];
 
@@ -51,8 +51,6 @@ class CartController extends GetxController {
       "totalallprice": totalallprice.toString(),
       
 
-
-     
     });
   }
 
@@ -96,20 +94,20 @@ class CartController extends GetxController {
     }
   }
 
-  addItems(String itemsid, String selcolor , String selsize) async {
+  addItems(String itemsid, String colors, String sizes) async {
     statusRequest = StatusRequest.loading;
     update();
-    if (myServices.sharedPreferences.getString("color") != null)
-      scolor = myServices.sharedPreferences.getString("color")!;
-    if (myServices.sharedPreferences.getString("size") != null)
-      ssize = myServices.sharedPreferences.getString("size")!;
+    // if (myServices.sharedPreferences.getString("color") != null)
+    //   scolor = myServices.sharedPreferences.getString("color")!;
+    // if (myServices.sharedPreferences.getString("size") != null)
+    //   ssize = myServices.sharedPreferences.getString("size")!;
+
     var response = await cartData.addCart(
-        myServices.sharedPreferences.getString("id")!,
-        itemsid,
-        ssize,
-        scolor, 
-        
-        );
+      myServices.sharedPreferences.getString("id")!,
+      itemsid,
+      colors,
+      sizes,
+    );
     statusRequest = handlingData(response);
     print("error $response");
     if (StatusRequest.success == statusRequest) {
@@ -117,8 +115,10 @@ class CartController extends GetxController {
         Get.rawSnackbar(
             title: "Notifcation", messageText: const Text("Cart added"));
 
-        print("================ $scolor");
-        print("================ $ssize");
+        // print("================ $scolor");
+        // print("================ $ssize");
+        myServices.sharedPreferences.setString("finalcolor", colors);
+        myServices.sharedPreferences.setString("finalsize", sizes);
 
         // data.addAll(response['data']);
       } else {
@@ -127,7 +127,9 @@ class CartController extends GetxController {
     }
   }
 
-  deleteItems(String itemsid, ) async {
+  deleteItems(
+    String itemsid,
+  ) async {
     statusRequest = StatusRequest.loading;
     update();
     var response = await cartData.removeCart(
@@ -195,10 +197,7 @@ class CartController extends GetxController {
     //  intialData();
     totalallprice = priceOrders - priceOrders * disscountCoupon! / 100;
     // ssize = Get.arguments['colorname'];
-    // scolor = Get.arguments['colorsize'];
-
-
-
+    
     controllerCoupon = TextEditingController();
     super.onInit();
   }

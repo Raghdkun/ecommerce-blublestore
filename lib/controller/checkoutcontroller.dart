@@ -6,6 +6,7 @@ import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:powerecommerce/controller/cart_controller.dart';
 import 'package:powerecommerce/core/class/statusrequest.dart';
 import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/constant/routes.dart';
@@ -50,7 +51,7 @@ class CheckoutController extends GetxController {
   List<AddressModel> address = [];
 
   String? addressId;
-   CartModel? cartModel ;
+  CartModel? cartModel;
 
   chooseAddress(String val) {
     addressId = val;
@@ -150,6 +151,7 @@ class CheckoutController extends GetxController {
         },
       );
     statusRequest = StatusRequest.loading;
+
     var response = await ordersData.addData(
       myServices.sharedPreferences.getString("id")!,
       addressId!,
@@ -157,8 +159,8 @@ class CheckoutController extends GetxController {
       couponid,
       priceorder,
       disscountCoupon,
-      myServices.sharedPreferences.getString("color")!,
-      myServices.sharedPreferences.getString("size")!,
+      myServices.sharedPreferences.getString("finalcolor")!,
+      myServices.sharedPreferences.getString("finalsize")!,
     );
     print("=============== $response");
     statusRequest = handlingData(response);
@@ -175,6 +177,10 @@ class CheckoutController extends GetxController {
             Get.offAllNamed(AppRoute.home);
           },
         );
+        myServices.sharedPreferences.remove("finalcolor"); 
+        myServices.sharedPreferences.remove("finalsize"); 
+
+
         // data.addAll(response['data']);
       } else {
         statusRequest = StatusRequest.failure;
@@ -223,9 +229,7 @@ class CheckoutController extends GetxController {
     totalallprice = Get.arguments['totalallprice'];
     cartModel = Get.arguments['cartmodel'];
 
-
-    // color = Get.arguments['color'];
-    // size = Get.arguments['size'];
+    // size = Get.arguments['sizes'];
 
     getAddressData();
     refresh();

@@ -112,8 +112,8 @@ class ProductDetailsControlllerImp extends ProductDetailsControlller {
     countitems = await getCountItems(itemsModel.itemsId!.toString());
     statusRequest = StatusRequest.success;
     myServices.sharedPreferences.getString("itemspricedisscount");
-    myServices.sharedPreferences.getString("color");
-    myServices.sharedPreferences.getString("size");
+    // myServices.sharedPreferences.getString("color");
+    // myServices.sharedPreferences.getString("size");
 
     getColorsData();
     getsizesData();
@@ -150,10 +150,10 @@ class ProductDetailsControlllerImp extends ProductDetailsControlller {
   }
 
   add() {
-    cartController.addItems(itemsModel.itemsId!.toString(), "", "");
+    cartController.addItems(itemsModel.itemsId!.toString(),colorName! , sizesName!);
     countitems++;
     Get.toNamed(
-      'cart',
+      'cart', 
     );
     update();
   }
