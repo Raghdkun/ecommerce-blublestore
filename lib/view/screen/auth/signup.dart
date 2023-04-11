@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:powerecommerce/controller/auth/signup_controller.dart';
 import 'package:powerecommerce/core/class/handlingdataview.dart';
 import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/functions/alertexitapp.dart';
@@ -7,7 +8,7 @@ import 'package:powerecommerce/core/functions/validinput.dart';
 import 'package:powerecommerce/view/widget/auth/custombutton.dart';
 import 'package:powerecommerce/view/widget/auth/textformfield.dart';
 
-import '../../../controller/signup_controller.dart';
+
 import '../../widget/auth/bodytextfield.dart';
 import '../../widget/auth/textsign.dart';
 import '../../widget/auth/texttitlefield.dart';
