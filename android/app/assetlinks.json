@@ -1,0 +1,11 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "Bluble Store",
+      "package_name": "com.powerecommerce.ecommerce",
+      "sha256_cert_fingerprints":
+      ["AB:81:3D:EC:D6:49:44:2A:4D:BE:42:F3:86:C2:DE:05:64:ED:14:18:16:2F:98:7E:86:D7:DE:3D:8E:11:D6:37"]
+    }
+  }]
+
+ 

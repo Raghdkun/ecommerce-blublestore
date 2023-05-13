@@ -1,6 +1,8 @@
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/binding/initial_binding.dart';
+import 'package:powerecommerce/core/functions/fcmconficmessage.dart';
 
 import 'package:powerecommerce/core/localization/translation.dart';
 import 'package:powerecommerce/core/services/services.dart';
@@ -11,6 +13,7 @@ import 'core/localization/changelocal.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialServices();
+  // inistialdynamiclink();
   runApp(const MyApp());
 }
 
@@ -22,7 +25,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     LocalLanguage controller = Get.put(LocalLanguage());
     return GetMaterialApp(
-      
       translations: MyTranslation(),
       locale: controller.language,
       debugShowCheckedModeBanner: false,

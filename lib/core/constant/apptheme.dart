@@ -40,6 +40,7 @@ ThemeData themeEnglish = ThemeData(
 
 ThemeData themeArabic = ThemeData(
     scaffoldBackgroundColor: Colors.white,
+    
     appBarTheme: AppBarTheme(
       backgroundColor: AppColor.customBlack,
       toolbarHeight: 65,
@@ -55,7 +56,9 @@ ThemeData themeArabic = ThemeData(
     
     fontFamily: "Cairo",
     primarySwatch: Colors.blue,
+
     textTheme: const TextTheme(
+
       displayLarge: TextStyle(
           fontWeight: FontWeight.bold, fontSize: 20, color: AppColor.customBlack),
       displayMedium: TextStyle(
@@ -71,5 +74,6 @@ ThemeData themeArabic = ThemeData(
           fontSize: 15,
           fontWeight: FontWeight.bold),
     ),
+    
     primaryColor: Colors.white);
 

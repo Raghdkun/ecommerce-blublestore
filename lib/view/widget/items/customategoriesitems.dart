@@ -48,7 +48,7 @@ class Categories extends GetView<ItemsControllerImp> {
     return InkWell(
         onTap: () {
           // controller.goToItems(controller.categories ,i!);
-          controller.changeCat(i!, categoriesModel.categoriesId.toString());
+          controller.changeCat(i!, categoriesModel.catId.toString());
         },
         child: GetBuilder<ItemsControllerImp>(
           builder: (controller) => Column(
@@ -66,7 +66,7 @@ class Categories extends GetView<ItemsControllerImp> {
                       )
                     : null,
                 child: Text(
-                  "${translateDataBase(categoriesModel.categoriesNameAr, categoriesModel.categoriesNeme)}",
+                  "${translateDataBase(categoriesModel.catNamear, categoriesModel.catName)}",
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, color: AppColor.customBlack, fontSize: 18),
                 ),

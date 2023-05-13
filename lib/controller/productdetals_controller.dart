@@ -10,6 +10,8 @@ import 'package:powerecommerce/data/model/itemscolormode.dart';
 import 'package:powerecommerce/data/model/itemsmodel.dart';
 import 'package:powerecommerce/data/model/itemssizesmodel.dart';
 import 'package:powerecommerce/linkapi.dart';
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
+import 'package:share/share.dart';
 
 import '../data/datasource/remote/cart_data.dart';
 
@@ -150,12 +152,18 @@ class ProductDetailsControlllerImp extends ProductDetailsControlller {
   }
 
   add() {
-    cartController.addItems(itemsModel.itemsId!.toString(),colorName! , sizesName!);
+    cartController.addItems(
+        itemsModel.itemsId!.toString(), colorName!, sizesName!);
     countitems++;
     Get.toNamed(
-      'cart', 
+      'cart',
     );
     update();
+  }
+
+  int getProductId() {
+    final productId = Get.parameters['itemsid'];
+    return int.parse(productId.toString());
   }
 
   remove() {
@@ -164,6 +172,22 @@ class ProductDetailsControlllerImp extends ProductDetailsControlller {
       countitems--;
       update();
     }
+  }
+
+  dynamiclinkfirebase(itemsid) async {
+    final dynamicLinkParm = DynamicLinkParameters(
+        link: Uri.parse("https://blublestore.com/productdetails/$itemsid"),
+        uriPrefix: "https://blublestore.page.link/DQbR",
+        androidParameters: AndroidParameters(
+          packageName: "com.powerecommerce.ecommerce",
+          fallbackUrl: Uri.parse("https://blublestore.com/") , 
+
+        ));
+        Uri link = await FirebaseDynamicLinks.instance.buildLink(dynamicLinkParm); 
+        print(link) ; 
+        PendingDynamicLinkData(link: link);
+         
+        Share.share(link.toString()); 
   }
 
   @override

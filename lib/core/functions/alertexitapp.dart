@@ -7,7 +7,7 @@ import 'package:powerecommerce/core/constant/color.dart';
 Future<bool> alertExitApp() {
   Get.defaultDialog(
       title: "alert!",
-      middleText: "Do You Want To Close From The App?",
+      middleText: "Do You Want To Exit From The App?",
       radius: 10,
       buttonColor: AppColor.customBlack,
       actions: [

@@ -61,6 +61,7 @@ class PendingOrdersController extends GetxController {
   deleteData(String orderid) async {
     statusRequest = StatusRequest.loading;
     update();
+    data.clear();
     var response = await ordersData
         .deleteData(orderid);
     print("=============== $response");
@@ -70,6 +71,7 @@ class PendingOrdersController extends GetxController {
       if (response['status'] == "success") {
         // data.addAll(response['data']);
         pendingData();
+        
         update();
       } else {
         statusRequest = StatusRequest.failure;

@@ -153,7 +153,7 @@ class SearchedList extends GetView<HomeControllerImp> {
           return GetBuilder<HomeControllerImp>(
               builder: (controller) => InkWell(
                     onTap: () {
-                      controller.goToPageProductDetails(listDataModel[index]);
+                      controller.goToPageProductDetails(listDataModel[index], listDataModel[index].itemsId) ;
                     },
                     child: Container(
                       child: Column(

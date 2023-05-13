@@ -16,7 +16,7 @@ class CustomListItems extends GetView<ItemsControllerImp> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.goToPageProductDetails(itemsModel);
+        controller.goToPageProductDetails(itemsModel, itemsModel.itemsId);
       },
       child: Card(
         child: Padding(

@@ -48,7 +48,7 @@ class Categories extends GetView<HomeControllerImp> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.goToItems(controller.categories ,i! , categoriesModel.categoriesId.toString());
+        controller.goToItems(controller.categories ,i! , categoriesModel.catId.toString());
       },
       child: Column(
         children: [
@@ -57,9 +57,9 @@ class Categories extends GetView<HomeControllerImp> {
             width: 100,
             height: 50,
             child: SvgPicture.network(
-                "${AppLink.imagecategories}/${categoriesModel.categoriesImage}"),
+                "${AppLink.imagecategories}/${categoriesModel.catImage}"),
           ),
-          Text("${translateDataBase(categoriesModel.categoriesNameAr, categoriesModel.categoriesNeme)}"),
+          Text("${translateDataBase(categoriesModel.catNamear, categoriesModel.catName)}"),
         ],
       ),
     );

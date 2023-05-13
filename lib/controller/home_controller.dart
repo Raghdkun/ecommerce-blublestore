@@ -1,9 +1,11 @@
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/core/class/statusrequest.dart';
 import 'package:powerecommerce/core/constant/routes.dart';
+import 'package:powerecommerce/core/functions/fcmconficmessage.dart';
 import 'package:powerecommerce/core/functions/handlingdatacontroller.dart';
 import 'package:powerecommerce/core/services/services.dart';
 import 'package:powerecommerce/data/datasource/remote/cart_data.dart';
@@ -64,13 +66,14 @@ class HomeControllerImp extends HomeController {
   @override
   void onInit() {
     getdata();
+    // initDynamicLinks();
     // FirebaseMessaging.instance.getToken().then((value) {
     //   print(value);
     //   // String? token = value;
     // });
     // FirebaseMessaging.instance.subscribeToTopic("users");
     search = TextEditingController();
-
+// inistialdynamiclink(); 
     initialData();
     super.onInit();
   }
@@ -128,7 +131,7 @@ class HomeControllerImp extends HomeController {
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
-        categories.addAll(response['categories']['data']);
+        categories.addAll(response['cat']['data']);
         items.addAll(response['items']['data']);
         homeoffers.addAll(response['homeoffers']['data']);
         homeoffertitle = homeoffers[0]['homeoffers_title'];
@@ -172,7 +175,13 @@ class HomeControllerImp extends HomeController {
     });
   }
 
-  goToPageProductDetails(itemsModel) {
-    Get.toNamed("productdetails", arguments: {"itemsmodel": itemsModel});
+  goToPageProductDetails(itemsModel, itemsid) {
+    Get.toNamed("productdetails/$itemsid", arguments: {"itemsmodel": itemsModel});
   }
+
+    
+
 }
+    
+
+    

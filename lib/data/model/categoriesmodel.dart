@@ -1,36 +1,28 @@
 class Categoriesmodel {
-  int? categoriesId;
-  String? categoriesNeme;
-  String? categoriesNameAr;
-  String? categoriesImage;
-  String? categoriesDescription;
-  String? categoriesDatetime;
+  int? catId;
+  String? catName;
+  String? catNamear;
+  String? catImage;
+  String? catTime;
 
   Categoriesmodel(
-      {this.categoriesId,
-      this.categoriesNeme,
-      this.categoriesNameAr,
-      this.categoriesImage,
-      this.categoriesDescription,
-      this.categoriesDatetime});
+      {this.catId, this.catName, this.catNamear, this.catImage, this.catTime});
 
   Categoriesmodel.fromJson(Map<String, dynamic> json) {
-    categoriesId = json['categories_id'];
-    categoriesNeme = json['categories_neme'];
-    categoriesNameAr = json['categories_name_ar'];
-    categoriesImage = json['categories_image'];
-    categoriesDescription = json['categories_description'];
-    categoriesDatetime = json['categories_datetime'];
+    catId = json['cat_id'];
+    catName = json['cat_name'];
+    catNamear = json['cat_namear'];
+    catImage = json['cat_image'];
+    catTime = json['cat_time'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['categories_id'] = categoriesId;
-    data['categories_neme'] = categoriesNeme;
-    data['categories_name_ar'] = categoriesNameAr;
-    data['categories_image'] = categoriesImage;
-    data['categories_description'] = categoriesDescription;
-    data['categories_datetime'] = categoriesDatetime;
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['cat_id'] = this.catId;
+    data['cat_name'] = this.catName;
+    data['cat_namear'] = this.catNamear;
+    data['cat_image'] = this.catImage;
+    data['cat_time'] = this.catTime;
     return data;
   }
 }

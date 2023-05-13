@@ -14,17 +14,19 @@ class DisscountProducts extends GetView<HomeControllerImp> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       height: 200,
-      child: controller.items != null ? GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3, childAspectRatio: 0.7),
-        itemCount: controller.items.length,
-        // scrollDirection: Axis.horizontal,
-        itemBuilder: (context, i) {
-          return DiscountItems(
-              itemsmodel: ItemsModel.fromJson(controller.items[i]),
-            );
-        },
-      ) : null,
+      child: controller.items != null
+          ? GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3, childAspectRatio: 0.7),
+              itemCount: controller.items.length,
+              // scrollDirection: Axis.horizontal,
+              itemBuilder: (context, i) {
+                return DiscountItems(
+                  itemsmodel: ItemsModel.fromJson(controller.items[i]),
+                );
+              },
+            )
+          : null,
     );
   }
 }
@@ -37,7 +39,7 @@ class DiscountItems extends GetView<HomeControllerImp> {
   Widget build(BuildContext context) {
     return InkWell(
         onTap: () {
-          controller.goToPageProductDetails(itemsmodel);
+          controller.goToPageProductDetails(itemsmodel, itemsmodel.itemsId);
         },
         child: Column(
           children: [

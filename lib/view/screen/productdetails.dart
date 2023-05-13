@@ -23,7 +23,7 @@ class ProductDetails extends GetView<ProductDetailsControlllerImp> {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(ProductDetailsControlllerImp());
+   ProductDetailsControlllerImp controlller = Get.put(ProductDetailsControlllerImp());
     // FavoriteController favoriteController = Get.put(FavoriteController());
 
     return Scaffold(
@@ -37,7 +37,11 @@ class ProductDetails extends GetView<ProductDetailsControlllerImp> {
             "Details",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          actions: [],
+          actions: [
+            IconButton(onPressed: (){
+              controller.dynamiclinkfirebase(controlller.itemsModel.itemsId); 
+            }, icon: Icon(Icons.share))
+          ],
           elevation: 0.0,
           // backgroundColor: Colors.deepPurple,
         ),
