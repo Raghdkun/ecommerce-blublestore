@@ -3,10 +3,8 @@ import 'package:powerecommerce/core/class/statusrequest.dart';
 import 'package:powerecommerce/core/functions/handlingdatacontroller.dart';
 import 'package:powerecommerce/core/services/services.dart';
 import 'package:powerecommerce/data/datasource/remote/myfavorite_data.dart';
-import 'package:powerecommerce/data/model/itemsmodel.dart';
 // import 'package:powerecommerce/data/model/itemsmodel.dart';
 import 'package:powerecommerce/data/model/myfavoritemodel.dart';
-import 'package:powerecommerce/view/screen/items.dart';
 
 class MyFavoriteController extends GetxController {
   MyFavoriteData favoriteData = MyFavoriteData(Get.find());

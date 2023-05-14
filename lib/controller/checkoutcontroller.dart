@@ -6,7 +6,6 @@ import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:powerecommerce/controller/cart_controller.dart';
 import 'package:powerecommerce/core/class/statusrequest.dart';
 import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/constant/routes.dart';

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/controller/cart_controller.dart';
 import 'package:powerecommerce/core/constant/color.dart';
-import 'package:powerecommerce/core/constant/routes.dart';
-import 'package:powerecommerce/view/widget/cart/curombuttoncoupon.dart';
 import 'package:powerecommerce/view/widget/cart/custombuttoncart.dart';
 
 class CustomNavigationBar extends GetView<CartController> {

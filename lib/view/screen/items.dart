@@ -5,7 +5,6 @@ import 'package:powerecommerce/controller/items_controller.dart';
 import 'package:powerecommerce/core/class/handlingdataview.dart';
 import 'package:powerecommerce/core/functions/translatedatabase.dart';
 import 'package:powerecommerce/data/model/itemsmodel.dart';
-import 'package:powerecommerce/view/widget/customappbar.dart';
 import 'package:powerecommerce/view/widget/items/customategoriesitems.dart';
 import 'package:powerecommerce/view/widget/items/customlistitems.dart';
 

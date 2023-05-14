@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/constant/routes.dart';
 import 'package:powerecommerce/core/functions/translatedatabase.dart';
 import 'package:powerecommerce/core/localization/changelocal.dart';
-import 'package:powerecommerce/view/widget/customappbar.dart';
 
 import '../../controller/settings_controller.dart';
 

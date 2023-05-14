@@ -9,7 +9,6 @@ import 'package:powerecommerce/data/datasource/remote/subitemdata.dart';
 import 'package:powerecommerce/data/model/itemscolormode.dart';
 import 'package:powerecommerce/data/model/itemsmodel.dart';
 import 'package:powerecommerce/data/model/itemssizesmodel.dart';
-import 'package:powerecommerce/linkapi.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:share/share.dart';
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:powerecommerce/core/constant/color.dart';
 
 class CustomAd extends StatelessWidget {
   final String title ;

@@ -2,19 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:powerecommerce/controller/favorite_controller.dart';
 import 'package:powerecommerce/controller/productdetals_controller.dart';
 import 'package:powerecommerce/core/class/handlingdataview.dart';
 import 'package:powerecommerce/core/class/statusrequest.dart';
-import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/functions/translatedatabase.dart';
 import 'package:powerecommerce/data/model/itemscolormode.dart';
-import 'package:powerecommerce/data/model/itemsmodel.dart';
 import 'package:powerecommerce/data/model/itemssizesmodel.dart';
 import 'package:powerecommerce/linkapi.dart';
-import 'package:powerecommerce/view/widget/items/subitemscolors.dart';
-import 'package:powerecommerce/view/widget/productdetails/custompruductdetails.dart';
-import 'package:powerecommerce/view/widget/productdetails/itemimages.dart';
 import 'package:powerecommerce/view/widget/productdetails/itemspriceandcart.dart';
 
 class ProductDetails extends GetView<ProductDetailsControlllerImp> {

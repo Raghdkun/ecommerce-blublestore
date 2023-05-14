@@ -1,8 +1,6 @@
-import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/binding/initial_binding.dart';
-import 'package:powerecommerce/core/functions/fcmconficmessage.dart';
 
 import 'package:powerecommerce/core/localization/translation.dart';
 import 'package:powerecommerce/core/services/services.dart';

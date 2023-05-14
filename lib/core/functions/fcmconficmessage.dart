@@ -1,10 +1,8 @@
-import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:ringtone_player/ringtone_player.dart';
 // import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/controller/orders/pendingorderscontroller.dart';
-import 'package:powerecommerce/controller/productdetals_controller.dart';
 
 RequsetpermisionNotifications() async {
   NotificationSettings settings =

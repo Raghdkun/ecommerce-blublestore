@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:powerecommerce/controller/productdetals_controller.dart';
 import 'package:powerecommerce/core/functions/translatedatabase.dart';
 import 'package:powerecommerce/view/widget/items/customitemscounts.dart';
-import 'package:powerecommerce/view/widget/items/subitemscolors.dart';
 
 class CustomProductDetails extends GetView<ProductDetailsControlllerImp> {
   const CustomProductDetails({super.key});

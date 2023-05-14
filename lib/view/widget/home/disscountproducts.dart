@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/controller/home_controller.dart';
-import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/functions/translatedatabase.dart';
 import 'package:powerecommerce/data/model/itemsmodel.dart';
 import 'package:powerecommerce/linkapi.dart';

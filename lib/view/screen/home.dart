@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/controller/home_controller.dart';
-import 'package:powerecommerce/controller/items_controller.dart';
 import 'package:powerecommerce/core/class/handlingdataview.dart';
 import 'package:powerecommerce/core/constant/routes.dart';
 import 'package:powerecommerce/core/functions/alertexitapp.dart';
@@ -12,7 +11,6 @@ import 'package:powerecommerce/view/widget/home/customproducttitle.dart';
 import 'package:powerecommerce/view/widget/home/customad.dart';
 import 'package:powerecommerce/view/widget/home/customcategories.dart';
 import 'package:powerecommerce/view/widget/home/disscountproducts.dart';
-import 'package:powerecommerce/view/widget/customappbar.dart';
 import 'package:powerecommerce/view/widget/customsearch.dart';
 import 'package:powerecommerce/view/widget/searchwidget.dart';
 

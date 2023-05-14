@@ -5,7 +5,6 @@ import 'package:powerecommerce/core/functions/handlingdatacontroller.dart';
 import 'package:powerecommerce/core/services/services.dart';
 import 'package:powerecommerce/data/datasource/remote/itemsdata.dart';
 import 'package:powerecommerce/data/model/itemsmodel.dart';
-import 'package:share/share.dart';
 
 abstract class ItemsController extends GetxController {
   intialData();

@@ -3,13 +3,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/controller/cart_controller.dart';
 import 'package:powerecommerce/core/class/handlingdataview.dart';
-import 'package:powerecommerce/core/constant/color.dart';
 
 import 'package:powerecommerce/view/widget/cart/cartlist.dart';
 import 'package:powerecommerce/view/widget/cart/curombuttoncoupon.dart';
 
 import 'package:powerecommerce/view/widget/cart/customnavigationbar.dart';
-import 'package:powerecommerce/view/widget/customappbar.dart';
 
 class Cart extends StatelessWidget {
   const Cart({super.key});

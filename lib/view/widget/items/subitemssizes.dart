@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:powerecommerce/controller/items_controller.dart';
 import 'package:powerecommerce/controller/productdetals_controller.dart';
 
 class SubItemsizes extends GetView<ProductDetailsControlllerImp> {

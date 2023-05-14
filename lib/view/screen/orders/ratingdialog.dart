@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:powerecommerce/core/constant/color.dart';
-import 'package:powerecommerce/core/constant/imageasset.dart';
 import 'package:rating_dialog/rating_dialog.dart';
 import 'package:get/get.dart';
 import 'package:powerecommerce/controller/orders/archivecontroller.dart';

@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:powerecommerce/controller/auth/login_controller.dart';
 
 import 'package:powerecommerce/core/class/handlingdataview.dart';
-import 'package:powerecommerce/core/constant/color.dart';
-import 'package:powerecommerce/core/constant/routes.dart';
 import 'package:powerecommerce/core/functions/alertexitapp.dart';
 import 'package:powerecommerce/core/functions/validinput.dart';
 import 'package:powerecommerce/view/widget/auth/custombutton.dart';

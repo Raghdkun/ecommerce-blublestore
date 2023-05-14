@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:powerecommerce/controller/favorite_controller.dart';
 import 'package:powerecommerce/controller/productdetals_controller.dart';
 import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/functions/translatedatabase.dart';

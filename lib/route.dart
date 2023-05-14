@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 import 'package:powerecommerce/core/constant/routes.dart';
 import 'package:powerecommerce/core/middleware/mymiddleware.dart';
-import 'package:powerecommerce/data/model/itemsmodel.dart';
-import 'package:powerecommerce/test_view.dart';
 import 'package:powerecommerce/view/address/add.dart';
 
 import 'package:powerecommerce/view/screen/auth/forgetpassword/forgetpassword.dart';

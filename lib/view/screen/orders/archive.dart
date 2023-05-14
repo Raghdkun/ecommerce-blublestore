@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:powerecommerce/controller/orders/archivecontroller.dart';
@@ -7,7 +6,6 @@ import 'package:powerecommerce/core/class/handlingdataview.dart';
 import 'package:powerecommerce/core/constant/color.dart';
 import 'package:powerecommerce/core/constant/routes.dart';
 import 'package:powerecommerce/data/model/ordersmodel.dart';
-import 'package:powerecommerce/view/screen/orders/orders.dart';
 import 'package:powerecommerce/view/screen/orders/ratingdialog.dart';
 
 class ArchivedOrders extends StatelessWidget {
